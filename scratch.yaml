@@ -1,0 +1,7 @@
+- hosts: host
+  task:
+    -name: Install on App server
+    yum: pkg=lynx state=installed update_cache=true
+    environment:
+      http_proxy: http://one.proxy.att.com:8080
+      https_proxy: http://one.proxy.att.com:8080
